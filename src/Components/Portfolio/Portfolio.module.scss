@@ -1,0 +1,34 @@
+@import "../../Scss/_measure.scss";
+.portfolio {
+  background: #e0eeff;
+  padding: 24px 24px 29px 24px;
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    span {
+      color: #022b9e;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+      display: flex;
+      justify-content: space-between;
+      button {
+        background-color: transparent;
+        padding: 10px 8px;
+        border: 0.682px solid #bdbdbd;
+        border-radius: 2.73px;
+      }
+    }
+    p {
+      button {
+        display: none;
+        @include responsive728 {
+          display: block;
+        }
+      }
+    }
+  }
+}
