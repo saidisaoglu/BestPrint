@@ -1,7 +1,8 @@
 import styles from "../Services/Services.module.scss";
-import ServicesImg from "../../Images/Home/Services/servicesImg.png";
-import RightButton from "../../Images/Home/Services/RightButton.svg";
+import ServicesImg from "../../Images/Home/servicesImg.png";
+import RightButton from "../../Images/Home/RightButton.svg";
 import Button from "../Ui/Button";
+
 
 export default function Services() {
   const cardBoxes = Array.from({ length: 6 }, (_, index) => (
@@ -21,8 +22,8 @@ export default function Services() {
           Xidmətlərimiz <Button variant="lookThemAll">Hamısına bax</Button>
         </p>
         <p>
-          Keyfiyyətli xidmətlərimiz ilə, işinizi hər kəsdən fərqləndirin{" "}
-          <button>Hamısına bax</button>
+          Keyfiyyətli xidmətlərimiz ilə, işinizi hər kəsdən fərqləndirin
+          <Button variant="lookThemAll">Hamısına bax</Button>
         </p>
       </div>
       <div className={styles.cardsBox}>{cardBoxes}</div>

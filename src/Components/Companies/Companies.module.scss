@@ -1,0 +1,114 @@
+@import "../../Scss/_measure.scss";
+
+.companies {
+  padding: 24px 20px;
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 24px 29px 24px;
+
+    span {
+      color: #022b9e;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        background-color: transparent;
+        padding: 10px 8px;
+        border: 0.682px solid #bdbdbd;
+        border-radius: 2.73px;
+        @include responsive728 {
+          display: none;
+        }
+      }
+    }
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
+      button {
+        display: none;
+        @include responsive728 {
+          display: block;
+        }
+      }
+    }
+  }
+  .cardsBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    @include responsive728 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      position: relative;
+      flex: 1 0 100%;
+
+      @include responsive728 {
+        flex: 1 0 calc(calc(100% - 30px) / 2);
+      }
+      @include responsive992 {
+        flex: 1 0 auto;
+      }
+      .image {
+        aspect-ratio: 2 / 1;
+        img {
+          width: 100%;
+          border-radius: 15px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+      .texts {
+        position: absolute;
+        top: 13%;
+        left: 0;
+        padding: 20px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: 0.7rem;
+          margin-bottom: 4px;
+          @include responsive728 {
+            font-size: 0.8rem;
+          }
+          @include responsive992 {
+            font-size: 1rem;
+          }
+        }
+        span {
+          font-size: 1rem;
+          font-weight: 700;
+          @include responsive728 {
+            font-size: 1.25rem;
+          }
+          @include responsive992 {
+            font-size: 2.25rem;
+          }
+        }
+        Button {
+          color: #fff;
+          font-weight: 700;
+          padding: 7.18px 17.94px;
+          margin-top: 14px;
+          width: max-content;
+          @include responsive992 {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

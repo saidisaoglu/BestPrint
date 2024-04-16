@@ -1,11 +1,25 @@
 @import "../../Scss/_measure.scss";
 .portfolio {
+  position: relative;
   background: #e0eeff;
-  padding: 24px 24px 29px 24px;
+  .polygon1 {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    width: 10%;
+    fill: rgba(0, 141, 231, 0.39);
+  }
+  .polygon2 {
+    position: absolute;
+    bottom: 110px;
+    right: 0;
+  }
   .textBox {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 24px 24px 29px 24px;
+
     span {
       color: #022b9e;
       font-size: 1rem;
@@ -15,20 +29,34 @@
       letter-spacing: 0.2px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       button {
         background-color: transparent;
         padding: 10px 8px;
         border: 0.682px solid #bdbdbd;
         border-radius: 2.73px;
+        @include responsive728 {
+          display: none;
+        }
       }
     }
     p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
       button {
         display: none;
         @include responsive728 {
           display: block;
         }
       }
+    }
+  }
+  .carouselBox {
+    img {
+      width: 70%;
+      object-fit: contain;
     }
   }
 }
