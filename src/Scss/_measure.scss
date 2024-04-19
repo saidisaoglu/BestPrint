@@ -168,11 +168,22 @@
     @content;
   }
 }
+@mixin responsive1700 {
+  @media screen and (min-width: 1700px) {
+    @content;
+  }
+}
 @mixin responsive1740 {
   @media (min-width: 1740px) {
     @content;
   }
 }
+@mixin responsive1800 {
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
 @mixin responsive1840 {
   @media (min-width: 1840px) {
     @content;
